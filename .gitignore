@@ -1,0 +1,35 @@
+# ─── Secrets ──────────────────────────────────────────────────────────────
+# Real credentials live in .env (never committed). .env.example is the tracked
+# template that documents which variables exist.
+.env
+.env.local
+!.env.example
+
+# ─── Data ─────────────────────────────────────────────────────────────────
+# The BNetzA CSV and every derived Parquet: large, sourced from an external
+# regulator, and regenerated from code. Never committed. The folders are kept
+# (via .gitkeep) so the medallion layout exists on a fresh clone.
+/data/raw/*
+/data/staging/*
+/data/curated/*
+!/data/raw/.gitkeep
+!/data/staging/.gitkeep
+!/data/curated/.gitkeep
+*.parquet
+
+# ─── Python: environment & caches ─────────────────────────────────────────
+.venv/
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ─── macOS / editors ──────────────────────────────────────────────────────
+.DS_Store
+.vscode/
+.idea/
