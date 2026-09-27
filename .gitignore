@@ -15,6 +15,7 @@
 !/data/raw/.gitkeep
 !/data/staging/.gitkeep
 !/data/curated/.gitkeep
+/docs/project-spec.md
 *.parquet
 
 # ─── Python: environment & caches ─────────────────────────────────────────
